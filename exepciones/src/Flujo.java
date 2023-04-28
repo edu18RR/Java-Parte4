@@ -16,14 +16,17 @@ public class Flujo {
         for (int i = 1; i <=5; i++) {
             System.out.println(i);
             try {//captura la excepcion
-                int num = 0;
-                int resultado = i/num;
-                System.out.println(resultado);
+                //int num = 0;
+                //int resultado = i/num;
+                //System.out.println(resultado);
+                String test = null;
+                System.out.println(test.toString());
                 
-            } catch (arithmeticException excepcion) {//Atrapa el error
-                System.out.println(excepcion.getMessage());
+            } catch (ArithmeticException | NullPointerException excepcion) {//Atrapa el error
+                System.out.println("Atrapo Exception");
+                System.out.println(excepcion.getMessage());                
                 excepcion.printStackTrace();
-            }            
+            }
         }
             System.out.println("fin de metodo2");
     }
