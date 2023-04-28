@@ -15,6 +15,15 @@ public class Flujo {
     System.out.println("inicio metodo2");
         for (int i = 1; i <=5; i++) {
             System.out.println(i);
+            try {//captura la excepcion
+                int num = 0;
+                int resultado = i/num;
+                System.out.println(resultado);
+                
+            } catch (arithmeticException excepcion) {//Atrapa el error
+                System.out.println(excepcion.getMessage());
+                excepcion.printStackTrace();
+            }            
         }
             System.out.println("fin de metodo2");
     }
