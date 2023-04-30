@@ -15,10 +15,13 @@ public class Flujo {
     System.out.println("inicio metodo2");
         for (int i = 1; i <=5; i++) {
             System.out.println(i);
+            
             try {//captura la excepcion
-                //int num = 0;
-                //int resultado = i/num;
-                //System.out.println(resultado);
+                if (i == 3) {
+                int num = 0;                        
+                int resultado = i/num;
+                System.out.println(resultado);
+            }
                 String test = null;
                 System.out.println(test.toString());
                 
