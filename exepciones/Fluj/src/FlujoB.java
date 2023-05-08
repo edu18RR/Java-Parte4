@@ -4,16 +4,19 @@ public class FlujoB {
         System.out.println("Fin del main");
     }
 
-    private    static void metodo1() { 
+    private static void metodo1() { 
         System.out.println("Inicio del metodo1"); 
-        metodo2();
+        try {
+            metodo2();
+        } catch (MiException me) {
+            me.printStackTrace();
+        }
         System.out.println("Fin del metodo1");
 
     }
 
     private static void metodo2() {
         System.out.println("Inicio del metodo2");
-        throw new ArithmeticException("Surgió un error");
-}
-
+        throw new MiException("Mi excepcion fue lanzada");
+    }
 }
