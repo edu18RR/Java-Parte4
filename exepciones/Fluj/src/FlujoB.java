@@ -16,7 +16,8 @@ public class FlujoB {
     }
 
     private static void metodo2() {
-        System.out.println("Inicio del metodo2");
-        throw new MiException("Mi excepcion fue lanzada");
+        //System.out.println("Inicio del metodo2");
+        //throw new MiException("Mi excepcion fue lanzada");
+        metodo2();
     }
 }
