@@ -10,15 +10,19 @@ public class FlujoB {
         System.out.println("Inicio del metodo1"); 
         try {
             metodo2();
-        } catch (MiException me) { //atrapa la excepcion
-            me.printStackTrace();
+        } catch(MiException ex) {
+            String msg = ex.getMessage();
+            System.out.println("Exception " + msg);
+            ex.printStackTrace();
         }
-        System.out.println("Fin del metodo1");
-
+        System.out.println("Fin de metodo1");
     }
 
     private static void metodo2() throws MiException {
-        System.out.println("Inicio del metodo2");
-        throw new MiException("Mi excepcion fue lanzada");
+        System.out.println("Inicio de metodo2");
+        throw new ArithmeticException("dio error");
+        // System.out.println("Fin de metodo2");
     }
+
+	
 }
